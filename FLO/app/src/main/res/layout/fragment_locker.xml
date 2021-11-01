@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/locker_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="보관함"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/locker_log_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:background="@color/transparent"
+        android:textColor="#3f3fff"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/locker_title_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/locker_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/locker_option_tl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locker_title_tv"
+        app:tabIndicatorColor="#3f3fff"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@color/transparent"
+        app:tabMode="scrollable"
+        app:tabTextColor="#3f3fff" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/locker_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locker_option_tl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

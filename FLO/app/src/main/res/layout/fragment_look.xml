@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/look_browse_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="둘러보기"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:id="@+id/look_browse_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/look_browse_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/look_browse_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/look_btn_chart_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver1"
+                    android:textColor="@color/white"
+                    android:text="차트"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/look_btn_video_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver2"
+                    android:text="영상"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toEndOf="@id/look_btn_chart_tv"/>
+
+                <TextView
+                    android:id="@+id/look_btn_genre_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver2"
+                    android:text="장르"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toEndOf="@id/look_btn_video_tv"/>
+                <TextView
+                    android:id="@+id/look_btn_situation_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver2"
+                    android:text="상황"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toEndOf="@id/look_btn_genre_tv"/>
+                <TextView
+                    android:id="@+id/look_btn_atmosphere_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver2"
+                    android:text="분위기"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toEndOf="@id/look_btn_situation_tv"/>
+                <TextView
+                    android:id="@+id/look_btn_thing_tv"
+                    android:layout_width="55dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/look_button_ver2"
+                    android:text="기타"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="@id/look_browse_cl"
+                    app:layout_constraintStart_toEndOf="@id/look_btn_atmosphere_tv"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/look_chart_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:text="차트"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/look_browse_sv"
+            />
+
+        <ImageView
+            android:id="@+id/look_btn_chart_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/btn_arrow_more"
+            app:layout_constraintStart_toEndOf="@id/look_chart_tv"
+            app:layout_constraintTop_toBottomOf="@id/look_browse_sv"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/look_second_const_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@id/look_chart_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/look_flo_chart_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="FLO 차트"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/look_second_const_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:id="@+id/look_flo_chart_time_standard_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="19시 기준"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/look_flo_chart_tv"
+                app:layout_constraintStart_toEndOf="@id/look_flo_chart_tv"
+                />
+            <ImageView
+                android:id="@+id/look_btn_play_all_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_browse_arrow_right"
+                app:layout_constraintTop_toTopOf="@id/look_second_const_layout"
+                app:layout_constraintEnd_toStartOf="@id/look_btn_flo_chart_all_song_tv"/>
+            <TextView
+                android:id="@+id/look_btn_flo_chart_all_song_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="전체듣기"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                app:layout_constraintTop_toTopOf="@id/look_second_const_layout"
+                app:layout_constraintEnd_toEndOf="@id/look_second_const_layout"
+                android:layout_marginEnd="25dp"/>
+            <TextView
+                android:id="@+id/look_flo_chart_exp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="최근 24시간 집계, FLO 최고 인기곡 차트!"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/look_flo_chart_tv"
+                app:layout_constraintStart_toStartOf="@id/look_second_const_layout"
+                />
+
+            <ImageView
+                android:id="@+id/look_album_img_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/img_album_exp2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/look_flo_chart_exp_tv"/>
+
+            <TextView
+                android:id="@+id/look_char_num1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toEndOf="@id/look_album_img_iv"
+                app:layout_constraintTop_toTopOf="@id/look_album_img_iv"/>
+
+            <TextView
+                android:id="@+id/look_chart_song_name1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="잠이 안온다"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/look_char_num1_tv"
+                app:layout_constraintTop_toTopOf="@id/look_char_num1_tv"
+                />
+            <TextView
+                android:id="@+id/look_chart_singer_name1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="젠(zen)"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/look_char_num1_tv"
+                app:layout_constraintTop_toBottomOf="@id/look_chart_song_name1_tv"
+                />
+
+            <ImageView
+                android:id="@+id/look_btn_chart_play1_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img"
+                app:layout_constraintBottom_toBottomOf="@id/look_chart_singer_name1_tv"
+                app:layout_constraintEnd_toEndOf="@id/look_second_const_layout"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/look_genre_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장르"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@id/look_second_const_layout"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/look_genre_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TableRow>
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_1"
+                    android:layout_marginStart="5dp"
+                    />
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_2"
+                    android:layout_marginStart="10dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_3"
+                    android:layout_marginStart="5dp"
+                    />
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_1"
+                    android:layout_marginStart="10dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_1"
+                    android:layout_marginStart="5dp"
+                    />
+                <ImageView
+                    android:layout_width="190dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/img_jenre_exp_2"
+                    android:layout_marginStart="10dp"
+                    />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
